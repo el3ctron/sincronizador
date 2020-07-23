@@ -5,6 +5,7 @@ echo
 sudo apt-get install -y git python-pip build-essential
 # sudo apt-get install -y python3-pip python-setuptools python-dev 
 sudo pip install percol
+echo ""
 echo "## ######################################"
 echo ""
 echo -n " [ digita tu nombre de usuario asignado por la comisión ] : "
@@ -27,7 +28,6 @@ echo git clone ssh://$usuario@$ip:$puerto$repo
 git clone ssh://$usuario@$ip:$puerto$repo
 echo ""
 echo "## ######################################"
-echo ""
 
 ## ######################################
 ## ######################################
@@ -44,4 +44,5 @@ read -n 1 -s -r -p "[Presiona una tecla para continuar] "
 
 echo $ip > ./sincronizador/.ip
 echo $usuario > ./sincronizador/.usuario
+echo $puerto > ./sincronizador/.puerto
 ./sincronizador/.sincronizador
