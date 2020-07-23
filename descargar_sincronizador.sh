@@ -7,15 +7,23 @@ sudo apt-get install -y git python-pip build-essential
 sudo pip install percol
 echo -n " [ digita tu nombre de usuario asignado por la comisión ] : "
 read usuario
-echo -n " [ digita la ip:puerto asignado ] : "
+echo -n " [ digita la ip asignada ] : "
 read ip
-repo=/rep/git/sincronizadores
+echo -n " [ digita el puerto asignado ] : "
+read puerto
+repo=/rep/git/sincronizador
 cd
-echo git clone ssh://$usuario@$ip$repo
-git clone ssh://$usuario@$ip$repo
-cd sincronizadores
-echo $ip > ./.ip
-echo $usuario > ./.usuario
+
+echo ""
+echo " [ INICIANDO DESCARGA DEL SINCRONIZADOR ]"
+echo ""
+echo "## ######################################"
+echo ""
+echo git clone ssh://$usuario@$ip:$puerto$repo
+git clone ssh://$usuario@$ip:$puerto$repo
+echo ""
+echo "## ######################################"
+echo ""
 
 ## ######################################
 ## ######################################
@@ -27,4 +35,6 @@ echo ""
 
 read -n 1 -s -r -p "[Presiona una tecla para continuar] "
 
-./.sincronizador
+echo $ip > ~/sincronizador/.ip
+echo $usuario > ~/sincronizador/.usuario
+~/sincronizador/.sincronizador
