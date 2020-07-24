@@ -25,6 +25,7 @@ echo ""
 echo "## ######################################"
 echo ""
 echo git clone ssh://$usuario@$ip:$puerto$repo
+echo ""
 git clone ssh://$usuario@$ip:$puerto$repo
 echo ""
 echo "## ######################################"
@@ -40,9 +41,10 @@ echo " de los pasos para iniciar la sincronización de archivos."
 echo ""
 echo "## ######################################"
 echo ""
-read -n 1 -s -r -p "[Presiona una tecla para continuar] "
+read -n 1 -s -r -p " [ Presiona una tecla para continuar ] "
 
 echo $ip > ./sincronizador/.ip
 echo $usuario > ./sincronizador/.usuario
 echo $puerto > ./sincronizador/.puerto
-./sincronizador/.sincronizador
+cd ./sincronizador/
+.sincronizador
