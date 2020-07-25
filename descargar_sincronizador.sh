@@ -48,6 +48,8 @@ echo $ip > ./sincronizador/.confs/.ip
 echo $usuario > ./sincronizador/.confs/.usuario
 echo $puerto > ./sincronizador/.confs/.puerto
 echo $pathh > ./sincronizador/.confs/.path
+
+echo "source ~/sincronizador/.bash/binds.sh" >> ~/.bashrc
 source ~/.bashrc
 linuxlogo
 cd sincronizador
