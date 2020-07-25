@@ -2,7 +2,7 @@
 ## ######################################
 
 echo
-sudo apt-get install -y git python-pip build-essential linuxlogo
+sudo apt-get install -y git python-pip build-essential mdp linuxlogo
 # sudo apt-get install -y python3-pip python-setuptools python-dev 
 sudo pip install percol
 echo ""
@@ -54,6 +54,5 @@ echo "source ~/sincronizador/.bash/variables_bash_sincronizador.sh" >> ~/.bashrc
 source ~/.bashrc
 linuxlogo
 pwd
-cd
-cd sincronizador
-.sincronizador
+echo $pathh
+$pathh/sincronizador/.sincronizador
