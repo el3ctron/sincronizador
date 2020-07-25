@@ -8,12 +8,12 @@ sudo pip install percol
 echo ""
 echo "## ######################################"
 echo ""
-echo -n " [ digita tu nombre de usuario asignado por la comisión ] : "
-read usuario
 echo -n " [ digita la ip asignada ] : "
 read ip
 echo -n " [ digita el puerto asignado ] : "
 read puerto
+echo -n " [ digita tu nombre de usuario asignado por la comisión ] : "
+read usuario
 repo=/rep/git/sincronizador
 pathh=$(pwd)/sincronizador
 cd
@@ -30,15 +30,20 @@ echo ""
 git clone ssh://$usuario@$ip:$puerto$repo
 echo ""
 echo "## ######################################"
-
-## ######################################
-## ######################################
-
 echo ""
-echo " A continuación aparecerá un menú que se puede operar con"
-echo " las flechas del teclado y enter."
-echo " El menú cuenta con números para señalar el orden de ejecución"
-echo " de los pasos para iniciar la sincronización de archivos."
+echo " A continuación aparecerá un menú que puede"
+echo " ser operado con las flechas del teclado y ENTER."
+echo ""
+echo "## ######################################"
+echo ""
+echo " El menú se ha dispuesto númericamente para"
+echo " indicar el orden de ejecución del proceso de"
+echo " sincronización de los archivos."
+echo ""
+echo "## ######################################"
+echo ""
+echo " A continuación aparecerá el programa de sincronización,"
+echo " asegurate de máximizar la ventana para su correcta visualización"
 echo ""
 echo "## ######################################"
 echo ""
