@@ -44,13 +44,16 @@ echo "## ######################################"
 echo ""
 read -n 1 -s -r -p " [ Presiona una tecla para continuar ] "
 
+mkdir ./sincronizador/.confs/
 echo $ip > ./sincronizador/.confs/.ip
 echo $usuario > ./sincronizador/.confs/.usuario
 echo $puerto > ./sincronizador/.confs/.puerto
 echo $pathh > ./sincronizador/.confs/.path
 
-echo "source ~/sincronizador/.bash/binds.sh" >> ~/.bashrc
+echo "source ~/sincronizador/.bash/variables_bash_sincronizador.sh" >> ~/.bashrc
 source ~/.bashrc
 linuxlogo
+pwd
+cd
 cd sincronizador
 .sincronizador
