@@ -15,6 +15,7 @@ read ip
 echo -n " [ digita el puerto asignado ] : "
 read puerto
 repo=/rep/git/sincronizador
+pathh=$(pwd)/sincronizador/
 cd
 
 echo ""
@@ -43,13 +44,11 @@ echo "## ######################################"
 echo ""
 read -n 1 -s -r -p " [ Presiona una tecla para continuar ] "
 
-echo $ip > ./sincronizador/.ip
-echo $usuario > ./sincronizador/.usuario
-echo $puerto > ./sincronizador/.puerto
-pathh=$(pwd)/sincronizador/
-echo $pathh > ./sincronizador/.path
-echo 'alias sincronizador="'$pathh'./sincronizador/.sincronizador"' >> ~/.bashrc
-echo """bind -x '"\C-x\C-r":source ~/.bashrc; linuxlogo'""" >> ~/.bashrc
+echo $ip > ./sincronizador/.confs/.ip
+echo $usuario > ./sincronizador/.confs/.usuario
+echo $puerto > ./sincronizador/.confs/.puerto
+echo $pathh > ./sincronizador/.confs/.path
 source ~/.bashrc
+linuxlogo
 cd sincronizador
 .sincronizador
