@@ -15,7 +15,7 @@ read ip
 echo -n " [ digita el puerto asignado ] : "
 read puerto
 repo=/rep/git/sincronizador
-pathh=$(pwd)/sincronizador/
+pathh=$(pwd)/sincronizador
 cd
 
 echo ""
@@ -55,4 +55,5 @@ source ~/.bashrc
 linuxlogo
 pwd
 echo $pathh
-$pathh/sincronizador/.sincronizador
+echo $pathh/.sincronizador
+$pathh/.sincronizador
