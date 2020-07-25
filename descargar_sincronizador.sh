@@ -2,7 +2,7 @@
 ## ######################################
 
 echo
-sudo apt-get install -y git python-pip build-essential
+sudo apt-get install -y git python-pip build-essential linuxlogo
 # sudo apt-get install -y python3-pip python-setuptools python-dev 
 sudo pip install percol
 echo ""
@@ -46,5 +46,11 @@ read -n 1 -s -r -p " [ Presiona una tecla para continuar ] "
 echo $ip > ./sincronizador/.ip
 echo $usuario > ./sincronizador/.usuario
 echo $puerto > ./sincronizador/.puerto
-cd ./sincronizador/
+pathh=$(pwd)/sincronizador/
+echo $pathh > ./sincronizador/.path
+echo 'alias sincronizador="$(pwd)./sincronizador/.sincronizador"' >> ~/.bashrc
+echo """bind -x '"\C-x\C-r":source ~/.bashrc; linuxlogo'""" >> ~/.bashrc
+source ~/.bashrc
+cd $pathh
+source ~/.bashrc
 .sincronizador
