@@ -56,4 +56,5 @@ linuxlogo
 pwd
 echo $pathh
 echo $pathh/.sincronizador
+ln -s ~/sincronizador/.bash/sincronizadorr abrir_sincronizador
 $pathh/.sincronizador
