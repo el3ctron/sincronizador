@@ -48,9 +48,8 @@ echo $usuario > ./sincronizador/.usuario
 echo $puerto > ./sincronizador/.puerto
 pathh=$(pwd)/sincronizador/
 echo $pathh > ./sincronizador/.path
-echo 'alias sincronizador="$(pwd)./sincronizador/.sincronizador"' >> ~/.bashrc
+echo 'alias sincronizador="'$pathh'./sincronizador/.sincronizador"' >> ~/.bashrc
 echo """bind -x '"\C-x\C-r":source ~/.bashrc; linuxlogo'""" >> ~/.bashrc
 source ~/.bashrc
-cd $pathh
-source ~/.bashrc
+cd sincronizador
 .sincronizador
